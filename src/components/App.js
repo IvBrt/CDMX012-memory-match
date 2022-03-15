@@ -1,18 +1,11 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
+import allData from "../data/webdev/webdev.js";
+
+const allDataClone = Object.assign({},allData);
+allDataClone.name = 'Frontend Web Dev Clone';
+console.log(allData,allDataClone);
+const arraysTogether = allData.items.concat(allDataClone.items);
+console.log(arraysTogether);
+
 
 const App = () => {
   const el = document.createElement('div');

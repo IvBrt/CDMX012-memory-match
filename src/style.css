@@ -1,0 +1,14 @@
+header{
+    background: #FF8AAE;
+}
+main{
+    background: #BAABDA;
+}
+footer{
+    background: #FFF89A;
+    position: absolute;
+    bottom: 0;
+}
+*{
+    margin: 0;
+}
