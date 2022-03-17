@@ -4,14 +4,15 @@ const allDataClone = Object.assign({},allData);
 allDataClone.name = 'Frontend Web Dev Clone';
 console.log(allData,allDataClone);
 const arraysTogether = allData.items.concat(allDataClone.items);
-console.log(arraysTogether);
+console.log(arraysTogether[0].image);
 
 
 const App = () => {
   const el = document.createElement('div');
 
   el.className = 'App';
-  el.textContent = 'Hola mundo!';
+  el.innerHTML =`<img src="${arraysTogether[6].image}"></img>`;
+
 
   return el;
 };
