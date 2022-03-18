@@ -13,3 +13,9 @@ footer{
     margin: 0;
     font-family: 'Ubuntu Mono', monospace;
 }
+.App{
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  height: 25%;
+}
