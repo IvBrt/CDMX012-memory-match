@@ -4,13 +4,19 @@ body{
 }
 header{
     padding: 1%;
-    background: #7EFFD4;
+    background: #56F89A;
     color: black;
     text-align: center;
     font-size: 2rem;
+    font-weight: bold;
+}
+.corchetes{
+    border: none;
+    width: 35px;
+    height: 35px;
 }
 footer{
-    background: #7EFFD4;
+    background: #56F89A;
     color: black;
     text-align: center;
     position: absolute;
@@ -30,7 +36,12 @@ main{
     width: 65%;
     height: 35%;
 }
-.App{
+.cardFront{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cardBack{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
