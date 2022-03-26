@@ -5,16 +5,20 @@ allDataClone.name = "Frontend Web Dev Clone";
 //console.log(allData, allDataClone);
 const bothArr = allData.items.concat(allDataClone.items);
 //console.log(bothArr);
+const imgIcon = "labo.png";
+
 
 const App = () => {
   const el = document.createElement("div");
-
+  
   for (let i = 0; i < bothArr.length; i++) {
     //console.log(i);
-    el.className = "cardFront";
-    el.innerHTML += `<img src="${bothArr[i].image}">`;
+    el.className = "cards";
+    el.innerHTML += `
+    <img src="${bothArr[i].image}" class="cardFront">
+    <img id=imgIcon${i} src="${imgIcon}" class="cardBack">`;
   }
-
+  
   return el;
 };
 

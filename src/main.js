@@ -1,12 +1,10 @@
 import App from './components/App.js';
 
-document.getElementById('root').appendChild(App()).style.display = "none";
+document.getElementById('root').appendChild(App());
+const chale = document.getElementById("again");
 
-const imgLab = document.getElementById("lab");
-
-function showCard(){
-    document.getElementById('root').appendChild(App()).style.display = "block";
-    document.querySelector(".cardBack").style.display ="none";
+function showCardBack(){
+    document.querySelector(".cardBack").style.display = "none";
 }
 
-imgLab.addEventListener("click",showCard);
+chale.addEventListener("click", showCardBack);
