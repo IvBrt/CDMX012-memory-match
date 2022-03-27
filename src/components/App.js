@@ -15,8 +15,8 @@ const App = () => {
     //console.log(i);
     el.className = "cards";
     el.innerHTML += `
-    <img src="${bothArr[i].image}" class="cardFront">
-    <img id=imgIcon${i} src="${imgIcon}" class="cardBack">`;
+    <div class="front"><img src="${bothArr[i].image}" class="cardFront"></div>
+    <div class="back"><img id=imgIcon${i} src="${imgIcon}" class="cardBack"></div>`;
   }
   
   return el;
