@@ -16,19 +16,13 @@ function hideCardFront() {
 }
 hideCardFront();
 
-function showCardFront(index) {
-  let idLabo = index.currentTarget.id;
+function showCardFront(event) {
+  let idLabo = event.currentTarget.id;
 
   for(let i = 0; i <= bothArr.length; i++){
     if(i == idLabo){
       cardBack[i].style.display = "none";
-      document.getElementById("idFront"+i).style.display = "block"
+      cardFront[i].style.display = "block"
     }
   }
-
-  alert("hello")
-  // bothArr
-  // document.getElementsById(idex).appendChild(App());
-  // cardFront.style.display = "block";
-  // cardBack.style.display = "none";
 }
