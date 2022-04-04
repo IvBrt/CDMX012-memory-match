@@ -12,7 +12,7 @@ const App = () => {
     //console.log(i);
     el.className = "cards";
     el.innerHTML += `
-    <div class="front"><img src="${bothArr[i].image}" class="cardFront"></div>
+    <div class="front"><img id="${bothArr[i].id}" src="${bothArr[i].image}" class="cardFront"></div>
     <div class="back"><img id=${i} src="${"labo.png"}" class="cardBack"></div>`;
   }
   return el;

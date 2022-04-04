@@ -6,7 +6,10 @@ const cardBack = document.querySelectorAll(".cardBack");
 const cardFront = document.querySelectorAll(".cardFront");
 
 cardBack.forEach((icon) => {
-  icon.addEventListener("click", showCardFront);
+  icon.addEventListener("click", (e)=>{
+    showCardFront(e)
+    console.log(e)
+  });
 });
 
 function hideCardFront() {
@@ -17,12 +20,24 @@ function hideCardFront() {
 hideCardFront();
 
 function showCardFront(event) {
-  let idLabo = event.currentTarget.id;
+  let idLab = event.currentTarget.id;
 
   for(let i = 0; i <= bothArr.length; i++){
-    if(i == idLabo){
+    if(i == idLab){
       cardBack[i].style.display = "none";
-      cardFront[i].style.display = "block"
+      cardFront[i].style.display = "block";
     }
   }
 }
+
+
+function sameCards(match){
+  let idBlack = match.currentTarget.id;
+  console.log(idBlack);
+  for (let i = 0; i < 3; i++){
+    if(match[i].id != idBlack){
+      console.log(idBlack);
+    }
+  }
+}
+
