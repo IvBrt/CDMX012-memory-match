@@ -52,8 +52,8 @@ img{
 }
 @media (max-width: 480px) {
     img{
-        width: 45px;
-        height: 45px;
+        width: 65px;
+        height: 65px;
     }
     header{
         font-size: 1rem;
@@ -61,5 +61,9 @@ img{
     .corchetes{
         width: 15px;
         height: 15px;
+    }
+    #root{
+        width: 55%;
+        height: 75%;
     }
 }

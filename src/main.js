@@ -5,9 +5,9 @@ document.getElementById("root").appendChild(App());
 const cardBack = document.querySelectorAll(".cardBack");
 const cardFront = document.querySelectorAll(".cardFront");
 
-let idL = 0;
 let count = 0;
-let selectId = "";
+let firstIdBack = 0;
+let firstIdFront = "";
 
 cardBack.forEach((icon) => {
   icon.addEventListener("click", showCardFront);
@@ -30,23 +30,28 @@ function showCardFront(event) {
       cardFront[i].style.display = "block";
 
       if (count == 1) {
-        selectId = cardFront[i].id; // se guarda el id de cardFront del primer clic
-        idL = idBack; //Se guard el id del primer clic
+        firstIdFront = cardFront[i].id; // se guarda el id de cardFront del primer clic
+        firstIdBack = idBack; //Se guard el id del primer clic
       } else if (count == 2) {
         // count == 2 es del segundo clic
-        if (selectId != cardFront[i].id) {
-          console.log("hi");
+        if (firstIdFront != cardFront[i].id) {
+          setTimeout(function () {
+            cardBack[firstIdBack].style.display = "block";
+            cardFront[firstIdBack].style.display = "none";
 
-          cardBack[idL].style.display = "block";
-          cardFront[idL].style.display = "none";
+            cardBack[idBack].style.display = "block";
+            cardFront[idBack].style.display = "none";
 
-          cardBack[idBack].style.display = "block";
-          cardFront[idBack].style.display = "none";
+            count = 0;
+            firstIdBack = 0;
+            firstIdFront = "";
+          }, 1000);
+        } else {
+          //Reseteamos valores iniciale para el flujo
+          count = 0;
+          firstIdBack = 0;
+          firstIdFront = "";
         }
-        //Reseteamos valores iniciale para el flujo
-        count = 0;
-        idL = 0;
-        selectId = "";
       }
     }
   }
