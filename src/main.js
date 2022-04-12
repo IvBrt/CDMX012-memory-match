@@ -31,7 +31,7 @@ function showCardFront(event) {
 
       if (count == 1) {
         firstIdFront = cardFront[i].id; // se guarda el id de cardFront del primer clic
-        firstIdBack = idBack; //Se guard el id del primer clic
+        firstIdBack = idBack; //se guarda el id del primer clic de idback
       } else if (count == 2) {
         // count == 2 es del segundo clic
         if (firstIdFront != cardFront[i].id) {
@@ -45,7 +45,7 @@ function showCardFront(event) {
             count = 0;
             firstIdBack = 0;
             firstIdFront = "";
-          }, 1000);
+          }, 500);
         } else {
           //Reseteamos valores iniciale para el flujo
           count = 0;

@@ -1,69 +1,83 @@
-body{
-    margin: 0;
-    font-family: 'Dosis', sans-serif;
+body {
+  margin: 0;
+  font-family: "Dosis", sans-serif;
 }
-header{
-    padding: 1%;
-    background: #56F89A;
-    color: black;
-    font-size: 2rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items:center ;
+header {
+  padding: 1%;
+  background: #ffe83afd;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.corchetes{
-    border: none;
-    width: 40px;
-    height: 40px;
+.corchetes {
+  border: none;
+  width: 40px;
+  height: 40px;
 }
-footer{
-    background: #56F89A;
-    color: black;
-    position: absolute;
-    bottom: 0;
+footer {
+  background: #ffe83afd;
+  color: black;
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+  text-align: center;
 }
-main{
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+main {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#root{
-    margin-top: 4%;
-    padding: 1%;
-    box-sizing: border-box;
-    border: 1px solid #F60385;
-    width: 55%;
-    height: 35%;
+#root {
+  margin-top: 4%;
+  padding: 1%;
+  box-sizing: border-box;
+  border: 1px solid #f60385;
+  width: 55%;
+  height: 35%;
 }
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+#reseatGame {
+  background-color: #f60385;
+  color: #ffffff;
+  margin: 25px 0;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border-style: none;
+  width: 120px;
+  font-weight: bold;
 }
-img{
-    margin: 0.5%;
-    padding: 0.5%;
-    width: 75px;
-    height: 75px;
-    border: 1px solid rgba(0, 0, 0, 0.100);
-    border-radius: 5%;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+img {
+  margin: 0.5%;
+  padding: 0.5%;
+  width: 75px;
+  height: 75px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5%;
 }
 @media (max-width: 480px) {
-    img{
-        width: 65px;
-        height: 65px;
-    }
-    header{
-        font-size: 1rem;
-    }
-    .corchetes{
-        width: 15px;
-        height: 15px;
-    }
-    #root{
-        width: 55%;
-        height: 75%;
-    }
+  img {
+    width: 65px;
+    height: 65px;
+  }
+  header {
+    font-size: 1rem;
+  }
+  .corchetes {
+    width: 15px;
+    height: 15px;
+  }
+  #root {
+    width: 55%;
+    height: 75%;
+  }
 }
